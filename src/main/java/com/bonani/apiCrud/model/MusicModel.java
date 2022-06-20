@@ -10,7 +10,6 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Table(name = "music")
 public class MusicModel extends RepresentationModel implements Serializable {
 

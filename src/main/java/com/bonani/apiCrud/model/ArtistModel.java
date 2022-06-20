@@ -1,11 +1,10 @@
 package com.bonani.apiCrud.model;
-
-import lombok.*;
-import org.springframework.data.annotation.Id;
 import org.springframework.hateoas.RepresentationModel;
 
+import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.*;
 
 
 @Entity
@@ -13,7 +12,6 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Table(name = "artist")
 public class ArtistModel extends RepresentationModel implements Serializable {
 
