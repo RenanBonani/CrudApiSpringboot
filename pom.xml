@@ -15,6 +15,11 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<!--flyway -->
+		<flyway.url>jdbc:mysql://localhost:3306/mybooks</flyway.url>
+		<flyway.user>bonani</flyway.user>
+		<flyway.password>24882192</flyway.password>
+		<flyway.schemas>mybands</flyway.schemas>
 	</properties>
 	<dependencies>
 
@@ -68,6 +73,30 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.4.33</version>
+		</dependency>
+		<!-- Content Negotiation XML Support -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+
+		<!-- Content Negotiation YAML Support -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+		</dependency>
+
+
+		<!-- HATEOAS support -->
+		<dependency>
+			<groupId>org.springframework.hateoas</groupId>
+			<artifactId>spring-hateoas</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>2.4.5</version>
 		</dependency>
 	</dependencies>
 
