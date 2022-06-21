@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/category/v1")
 public class CategoryController {
-    @Autowired
+
     private CategoryService service;
 
     @GetMapping(value = "/{id}", produces = {"application/json", "application/xml"})

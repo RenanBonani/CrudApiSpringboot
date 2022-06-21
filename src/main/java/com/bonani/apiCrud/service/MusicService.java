@@ -3,14 +3,13 @@ package com.bonani.apiCrud.service;
 import com.bonani.apiCrud.exception.NotFoundException;
 import com.bonani.apiCrud.model.MusicModel;
 import com.bonani.apiCrud.repository.IMusicRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class MusicService {
-    @Autowired
+
     private IMusicRepository repository;
 
     public List<MusicModel> findAll(){

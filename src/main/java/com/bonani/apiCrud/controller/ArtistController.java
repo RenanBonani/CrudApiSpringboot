@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/artist/v1")
 public class ArtistController {
-    @Autowired
+
     ArtistService service;
 
     @GetMapping(produces = {"application/json", "application/xml"})

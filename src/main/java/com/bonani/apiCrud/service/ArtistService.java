@@ -1,16 +1,15 @@
 package com.bonani.apiCrud.service;
-
 import com.bonani.apiCrud.exception.NotFoundException;
 import com.bonani.apiCrud.model.ArtistModel;
 import com.bonani.apiCrud.repository.IArtistRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class ArtistService {
-    @Autowired
+
     private IArtistRepository repository;
 
     public ArtistModel findById(long id){

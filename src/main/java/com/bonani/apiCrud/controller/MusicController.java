@@ -2,7 +2,6 @@ package com.bonani.apiCrud.controller;
 
 import com.bonani.apiCrud.model.MusicModel;
 import com.bonani.apiCrud.service.MusicService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
@@ -13,10 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
 @RestController
 @RequestMapping("/music/v1")
 public class MusicController {
-    @Autowired
+
     private MusicService service;
 
     @GetMapping(value = "/{id}", produces = {"application/json", "application/xml"})
