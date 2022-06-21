@@ -35,7 +35,6 @@ public class ArtistModel extends RepresentationModel implements Serializable {
         ArtistModel that = (ArtistModel) o;
         return id == that.id && Objects.equals(name, that.name) && Objects.equals(gender, that.gender) && Objects.equals(country, that.country);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(id, name, gender, country);
