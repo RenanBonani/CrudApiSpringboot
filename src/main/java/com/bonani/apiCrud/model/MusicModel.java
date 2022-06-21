@@ -4,6 +4,7 @@ import org.springframework.hateoas.RepresentationModel;
 import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.*;
 
 @Entity
 @Getter
@@ -28,5 +29,15 @@ public class MusicModel extends RepresentationModel implements Serializable {
     @JoinColumn(name = "category_id", nullable = false)
     private CategoryModel category;
 
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MusicModel musicModel = (MusicModel) o;
+        return id == musicModel.id && Objects.equals(title, musicModel.title) && Objects.equals(artist, musicModel.artist) && Objects.equals(category, musicModel.category);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, artist, category);
+    }
 }
